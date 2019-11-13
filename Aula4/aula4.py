@@ -38,16 +38,28 @@ else:
 #criação de variavel booleana atraves e expressao
 validador = False
 validador = True
+
+#Criação de variável booleana através de expressão de maior
 validador = ( idade > 18 )
 print(validador)
+
+#Criação de variável booleana através de expressão da diferença
 validador = ( idade != 18 )
 print(validador)
+
+#Criação de variável booleana através de expressão da igualdade
 validador = ( idade == 18 )
 print(validador)
+
+#Criação de variável booleana através de expressão de menor
 validador = ( idade < 18 )
 print(validador)
+
+#Criação de variável booleana através de expressão de maior ou igual
 validador = ( idade >= 18 )
 print(validador)
+
+#Criação de variável booleana através de expressão de menor ou igual
 validador = ( idade <= 18 )
 print(validador)
 
@@ -57,4 +69,3 @@ sorteado = 'Marcela'
 validador = (sorteado == 'Mateus' and sorteado == 'Marcela')
 validador = (sorteado == 'Mateus' or sorteado == 'Marcela')
 
-print(validador)
