@@ -34,3 +34,27 @@ else:
     print('Você é maior de idade')
 #Em caso de variável boleana, não é necessário a validação(==True)
 #Pois o IF ja valida se o conteúdo da variável é True, senão vai para o Else
+
+#criação de variavel booleana atraves e expressao
+validador = False
+validador = True
+validador = ( idade > 18 )
+print(validador)
+validador = ( idade != 18 )
+print(validador)
+validador = ( idade == 18 )
+print(validador)
+validador = ( idade < 18 )
+print(validador)
+validador = ( idade >= 18 )
+print(validador)
+validador = ( idade <= 18 )
+print(validador)
+
+validador = not True
+validador = not False
+sorteado = 'Marcela'
+validador = (sorteado == 'Mateus' and sorteado == 'Marcela')
+validador = (sorteado == 'Mateus' or sorteado == 'Marcela')
+
+print(validador)

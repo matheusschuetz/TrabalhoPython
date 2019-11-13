@@ -26,3 +26,4 @@ print(lista2[2])
 #usuario solicitar um dado em posição especifica
 posicao = int(input('digite a posicao que voce deseja escolher:'))
 print(lista2[posicao - 1])
+
