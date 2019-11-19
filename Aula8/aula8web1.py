@@ -8,4 +8,4 @@ app = Flask(__name__)
 def inicio():
     return 'Bem vindo ao mundo real meus quiridus'
 
-app.run()
+app.run(host='')
