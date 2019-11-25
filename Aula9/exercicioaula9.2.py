@@ -16,4 +16,4 @@ cabeçalho = '=' * 50
 x = int(input('Digite um número qualquer:'))
 y = int(input('Digite outro número qualquer:'))
 
-print(f'Soma:{soma(x,y)}\n{cabeçalho}\nSubtração:{sub(x,y)}\n{cabeçalho}\nMultiplicação:{multi(x,y)}\n{cabeçalho}\nDivisão:{div(x,y)}\n{cabeçalho}\nDivisão Francionada:{div_fra(x,y)}\n{cabeçalho}\nResto da Divisão:{rest_div(x,y)}\n{cabeçalho}\nRaiz Entre os dois números:{raiz(x,y)}\n{cabeçalho}')
+print(f'Soma:{soma(x,sy)}\n{cabeçalho}\nSubtração:{sub(x,y)}\n{cabeçalho}\nMultiplicação:{multi(x,y)}\n{cabeçalho}\nDivisão:{div(x,y)}\n{cabeçalho}\nDivisão Francionada:{div_fra(x,y)}\n{cabeçalho}\nResto da Divisão:{rest_div(x,y)}\n{cabeçalho}\nRaiz Entre os dois números:{raiz(x,y)}\n{cabeçalho}')
