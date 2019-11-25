@@ -6,11 +6,11 @@ print('Programa de investimeto Selic:')
 
 cotas = float(input('Digite o numero de cotas a serem compradas:'))
 lista = []
-
+taxa = 0.46 / 100
 if cotas >= 0.01:
-    valor = (10410 / cotas) / 100
+    valor = (10410 / cotas) 
     for i in range(1,7):
-        juros = valor * 0.02
+        juros = valor * (0.02 / 100) + taxa
         valor = juros + valor
         lista.append(valor)
 else:
