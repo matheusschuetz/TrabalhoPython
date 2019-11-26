@@ -7,7 +7,7 @@ from Funções import soma
 x = int(input('Digite um numero aqui por obsequio:'))
 y = int(input('Digita mais um por favore:'))
 
-print(f'Resultado:{soma(x,y)}')
+print(f'De acordo com meus cálculos, o resultado será:{soma(x,y)}')
 
 
 
