@@ -1,0 +1,9 @@
+4;Bruno;m;18
+3;Joao;m;20
+7;Eduardo;m;30
+4;Bruno;m;18
+3;Joao;m;20
+7;Eduardo;m;30
+4;Bruno;m;18
+3;Joao;m;20
+7;Eduardo;m;30

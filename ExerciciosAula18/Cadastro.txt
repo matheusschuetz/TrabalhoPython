@@ -1,0 +1,6 @@
+2,Matheus,m,17
+4,Bruno,m,18
+3,Joao,m,20
+5,Bruna,f,39
+6,Camila,f,21
+7,Eduardo,m,30
