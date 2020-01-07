@@ -4,6 +4,7 @@ vaero = False
 piloto = []
 terminal = ['comissaria1','comissaria2', 'piloto', 'oficial1', 'oficial2', 'chefe de serviço','policial', 'presidiario']
 def adicinar_motorista(opcao, passeiro, vaero, aviao) :   
+    
     if opcao == '1':
         if vaero == False:
             contador = 0
@@ -12,7 +13,7 @@ def adicinar_motorista(opcao, passeiro, vaero, aviao) :
                 contador += 1
             motorista = int(input(f'''Quem você gostaria de adicionar?'''))
             piloto.append(terminal.pop(motorista))
-            print(f'{piloto[0]} embarcou no veiculo')
+            print(f'=================\n{piloto[0]} embarcou no veiculo\n=================')
             
         elif vaero == True:
             contador = 0
@@ -21,10 +22,9 @@ def adicinar_motorista(opcao, passeiro, vaero, aviao) :
                 contador += 1
             motorista = int(input(f'Quem você gostaria de adicionar?'))
             piloto.append(aviao[motorista])
-            print(f'{piloto[0]} embarcou no veiculo')
+            print(f'=================\n{piloto[0]} embarcou no veiculo\n=================')
             aviao.remove(aviao[motorista])   
-            
-                
+def adicionar_passageiro(terminal):
     escolha = input('''Deseja adicionar passageiro?
             1 - Sim
             2 - Não''')
@@ -35,52 +35,40 @@ def adicinar_motorista(opcao, passeiro, vaero, aviao) :
             contador += 1
         escolhadnv = int(input('Quem você gostaria de adicionar?'))
         passageiro.append(terminal.pop(escolhadnv))
-        print(f'{passageiro[0]} embarcou no veículo')          
+        print(f'=================\n{passageiro[0]} embarcou no veiculo\n=================')          
         
     elif escolha == '2':
         pass
-    
+def veicuolo_movimento():
+    import time
     print('Veiculo esta andando')
+    for i in range(3):
+        time.sleep(1)
+        print('.')
+        
     
-    
+def desembarque(piloto, passageiro,vaero):   
     if vaero == False:
-        print(f'1 - {piloto}\n2 - {passageiro}\n3 - todos')
-        desembarque = input('Quem vai desembarcar?')
-        if desembarque == '1':
-            aviao.append(piloto.pop(0))
+        aviao.append(piloto.pop(0))
+        print(f'{aviao[-1]} embarcou no avião')
+        if passageiro:
+            aviao.append(passageiro.pop(0))
             print(f'{aviao[-1]} embarcou no avião')
-        elif desembarque == '2':
-            aviao.append(passageiro.pop(0))
-        elif desembarque == '3':
-            aviao.append(piloto.pop(0))
-            aviao.append(passageiro.pop(0))
-        
+    
+        vaero = True
+            
     elif vaero == True:
-        print(f'1 - {piloto}\n2 - {passageiro}\n3 - todos')
-        desembarque = input('Quem vai desembarcar?')
-        if desembarque == '1':
-            terminal.append(piloto.pop(0))
+        terminal.append(piloto.pop(0))
+        print(f'{terminal[-1]} desembarcou no terminal')
+        if passageiro: 
+            terminal.append(passageiro.pop(0))
             print(f'{terminal[-1]} desembarcou no terminal')
-            vaero = False
-        elif desembarque == '2':
-            terminal.append(passageiro.pop(0))
-        elif desembarque == '3':
-            terminal.append(piloto.pop(0))
-            terminal.append(passageiro.pop(0))
         
-    
-    
-    
-
-    
-
-       
         
-
-
-
-
-
+        vaero = False
+    return vaero
+    
+    
 
 while True:
     opcao = input('''##################################HBSIS AIRLINES##################################   
@@ -89,10 +77,15 @@ while True:
             2 - mostrar pessoas do aviao
             3 - mostrar pessoas no terminal
             4 - mostrar quem esta no veiculo
+##################################HBSIS AIRLINES##################################
     ''')
    
     if opcao == '1':
         adicinar_motorista(opcao, passageiro,vaero, aviao)
+        adicionar_passageiro(terminal)
+        veicuolo_movimento()
+        vaero = desembarque(piloto, passageiro,vaero)
+        
     elif opcao == '2':
         print(aviao)
     elif opcao == '3':
