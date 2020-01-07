@@ -68,7 +68,7 @@ def desembarque(piloto, passageiro,vaero):
         vaero = False
     return vaero
     
-    
+
 
 while True:
     opcao = input('''##################################HBSIS AIRLINES##################################   
@@ -92,3 +92,17 @@ while True:
         print(terminal)
     elif opcao == '4':
         print(passageiro, piloto)
+
+
+    a = open('Lucas_Matheus\Terminal.txt', 'w') 
+    for i in terminal:
+        a.write(i)
+        a.write('\n')
+    a.close()
+    b = open('Lucas_Matheus\Aviao.txt', 'w') 
+    for j in aviao:
+        b.write(j)
+        b.write('\n')
+    b.close()
+
+
