@@ -1,0 +1,8 @@
+comissaria1
+comissaria2
+piloto
+oficial1
+oficial2
+chefe de serviço
+policial
+presidiario
