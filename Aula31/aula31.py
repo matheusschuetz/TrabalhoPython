@@ -5,7 +5,7 @@
 #Mysql "=MariaDb
 
 #CRUD
-#C = CREATE
-#R = READ
-#U = UPDATE
-#D = DELETE
+#C = CREATE - INSERIR/SALVAR - INSERT
+#R = READ - LER/LISTAR       - SELECT
+#U = UPDATE - ALTERAR        - UPDATE
+#D = DELETE - APAGAR         - DELETE
