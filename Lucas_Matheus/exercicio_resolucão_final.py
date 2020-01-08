@@ -2,7 +2,20 @@ aviao = []
 passageiro = []
 vaero = False
 piloto = []
-terminal = ['comissaria1','comissaria2', 'piloto', 'oficial1', 'oficial2', 'chefe de serviço','policial', 'presidiario']
+terminal = []
+
+with open('Lucas_Matheus\Terminal.txt', 'r') as d:
+    for i in d:
+        terminal.append(i.strip())
+with open('Lucas_Matheus\Aviao.txt', 'r') as e:
+    for i in e:
+        terminal.append(i.strip())
+
+
+
+
+
+
 def adicinar_motorista(opcao, passeiro, vaero, aviao) :   
     
     if opcao == '1':
