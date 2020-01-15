@@ -18,7 +18,7 @@ class PessoaDb:
         resultado = self.cursor.fetchone()
         return(resultado)
 
-    def converter_tabela_classe(lista_tuplas):
+    def converter_tabela_classe(self, lista_tuplas):
         #-----criação de uma lista que adiciona os dicionarios
         lista_pessoas = []
         for p in lista_tuplas:
