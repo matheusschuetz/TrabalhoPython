@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pessoas</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Idade</th>
+                <th>Endereco Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in lista %}
+            <tr>
+                <td>{{ p.ID}}</td>
+                <td>{{ p.Logradouro}}</td>
+                <td>{{ p.Numero}}</td>
+                <td>{{ p.Complemento}}</td>
+                <td>{{ p.Bairro}}</td>
+                <td>{{ Cidade}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
