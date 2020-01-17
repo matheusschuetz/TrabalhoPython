@@ -1,5 +1,5 @@
 import sys
-sys.path.append('C:/Users/900152/Documents/Github/Dados/TrabalhoPython/Aula33/Aula33-4')
+sys.path.append('C:/Users/900152/Documents/Github/Dados/TrabalhoPython/Aula34/Aula34-1')
 
 from model.pessoa import Pessoa
 from dao.pessoadb import PessoaDb

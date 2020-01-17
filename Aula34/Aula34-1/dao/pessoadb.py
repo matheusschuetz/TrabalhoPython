@@ -1,4 +1,5 @@
-#----- Importar biblioteca do Mysql
+import sys
+sys.path.append('C:/Users/900152/Documents/Github/Dados/TrabalhoPython/Aula34/Aula34-1')
 import MySQLdb
 from model.pessoa import Pessoa
 
@@ -35,6 +36,6 @@ class PessoaDb:
             p1.Nome = p[1]
             p1.Sobrenome= p[2]
             p1.Idade = p[3]
-            p1.Endereco_id = p[4]
+            p1.endereco_ID = p[4]
             lista_pessoas.append(p1)
         return lista_pessoas

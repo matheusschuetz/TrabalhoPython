@@ -14,18 +14,37 @@
                 <th>Nome</th>
                 <th>Sobrenome</th>
                 <th>Idade</th>
-                <th>Endereco Id</th>
+                <th>Endereco_ID</th>
             </tr>
         </thead>
         <tbody>
-            {% for p in lista %}
+            {% for p in lista2 %}
             <tr>
-                <td>{{ p.ID}}</td>
-                <td>{{ p.Logradouro}}</td>
-                <td>{{ p.Numero}}</td>
-                <td>{{ p.Complemento}}</td>
-                <td>{{ p.Bairro}}</td>
-                <td>{{ Cidade}}</td>
+                <td>{{p.ID}}</td>
+                <td>{{p.Nome}}</td>
+                <td>{{p.Sobrenome}}</td>
+                <td>{{p.Idade}}</td>
+                <td>{{p.Endereco_ID}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <th>ID</th>
+                <th>Logradouro</th>
+                <th>Numero</th>
+                <th>Complemento</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in lista %}
+            <tr>
+                <td>{{ e.ID}}</td>
+                <td>{{ e.Logradouro}}</td>
+                <td>{{ e.Numero}}</td>
+                <td>{{ e.Complemento}}</td>
+                <td>{{ e.Bairro}}</td>
+                <td>{{ e.Cidade}}</td>
             </tr>
             {% endfor %}
         </tbody>
