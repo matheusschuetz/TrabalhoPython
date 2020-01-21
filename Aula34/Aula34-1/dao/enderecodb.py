@@ -20,7 +20,7 @@ class EnderecoDb:
 
     def buscar_por_id(self, id):
         #----- Criação do comando SQL e passado para o cursor
-        comando_sql_select = f"SELECT * FROM endereco WHERE ID= {ID}"
+        comando_sql_select = f"SELECT * FROM endereco WHERE ID= {id}"
         self.cursor.execute(comando_sql_select)
         resultado = self.cursor.fetchone()
         return resultado
