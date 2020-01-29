@@ -10,13 +10,10 @@ class SquadDb:
     cursor = conexao.cursor()
     #Listar todos os dados
     def listar_todos(self):
-        comando_sql_select = "SELECT * FROM aula37.squads"
-        #Executando comando 
-        self.cursor.execute(comando_sql_select)
-        #Seleciona todos os resultados
+        comando = f"SELECT * FROM aula37.squads"
+        self.cursor.execute(comando)
         resultado = self.cursor.fetchall()
-        lista_squad_resultado = self.converter_tabela_classe(resultado)
-        return lista_squad_resultado
+        return resultado
         
     def buscar_por_ID(self,ID):
         #criação do comando para passar o id para o cursor
@@ -24,27 +21,36 @@ class SquadDb:
         self.cursor.execute(comando_sql_select)
         resultado = self.cursor.fetchone()
         return resultado
-
-    def converter_tabela_classe(self, lista_tuplas):
-        #cria uma lista para armazenar os dicionarios
-        lista_squads = []
-        for s in lista_tuplas:
-            #criação do objeto da classe pessoa
-            s1 = Squad()
-            #pega cada posição da tupla e atribui a uma chave
-            s1.ID = s[0]
-            s1.Nome = s[1]
-            s1.Descricao = s[2]
-            s1.NumeroPessoas = s[3]
-            s1.LinguagemBackEnd = s[4]
-            s1.FrameworkFrontEnd = s[5]
-            lista_squads.append(s1)
-            print(s1)
-        return lista_squads
     
     def salvar(self, squad = Squad):
-        comando = 
+        comando = f"""INSERT INTO aula37.squads
+        (ID, Nome, Descricao, NumeroPessoas, LinguagemBackEnd, FrameworkFrontEnd)
+        VALUES({squad.ID},'{squad.Nome}','{squad.Descricao}',{squad.NumeroPessoas},'{squad.LinguagemBackEnd}','{squad.FrameworkFrontEnd}')"""
+        self.cursor.execute(comando)
+        self.conexao.commit()
+        id_inserido = self.cursor.lastrowid
+        return id_inserido
+
+    def alterar(self, squad = Squad):
+        comando = f"""UPDATE aula37.squads
+        SET 
+            Nome = '{squad.Nome}',
+            Descricao ='{squad.Descricao}',
+            NumeroPessoas = {squad.NumeroPessoas},
+            LinguagemBackEnd = {squad.LinguagemBackEnd}
+            FrameworkFrontEnd = {squad.FrameworkFrontEnd}
+        WHERE ID = {squad.id}
+        """
+        self.cursor.execute(comando)
+        self.conexao.commit()
+    
+    def deletar(self, id):
+        comando = f"DELETE FROM aula37.squads WHERE ID = {ID}"
+        self.cursor.execute(comando)
+        self.conexao.commit()
 
 
 
+s = SquadDb
 
+print(s)
