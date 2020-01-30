@@ -1,11 +1,19 @@
 from flask_restful import Resource
 
+from Aula41.dao.pessoaDao import  PessoaDao
+
 class PessoaController(Resource):
+    def __init__(self):
+        self.dao = PessoaDao()
     def get(self):
-        return "Retornando com o metodo GET"
+        msg = self.dao.list_all()
+        return msg
     def post(self):
-        return "Retornando com o metodo POST"
+        msg = self.dao.insert('')
+        return msg
     def put(self):
-        return "Retornando com o metodo PUT"
+        msg = self.dao.update('')
+        return msg
     def delete(self):
-        return "Retornando com o Metodo DELETE"
+        msg = self.dao.delete(0)
+        return msg
