@@ -1,9 +1,9 @@
 import MySQLdb
 
 from Aula41.Model.pessoaModel import PessoaModel
-class PessoaDao:
+ class PessoaDao:
     def __init__(self):
-        self.conection = MySQLdb.connect(host= '127.0.0.1', database='aula1', user='root')
+        self.connection = MySQLdb.connect(host= '127.0.0.1', database='aula1', user='root')
         self.cursor = self.connection.cursor()
     def list_all(self):
         self.cursor.execute("SELECT * FROM pessoa")
@@ -38,6 +38,3 @@ class PessoaDao:
         self.cursor.execute(f"DELETE FROM pessoa WHERE ID = {id}")
         self.connection.commit()
         return f'Removido a pessoa de id : {id}'
-
-
-

@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 
+
 from Aula41.Controller.pessoacontroller import PessoaController
 from Aula41.Controller.enderecoController import EnderecoController
 app = Flask(__name__)

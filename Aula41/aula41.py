@@ -6,3 +6,5 @@
 
 #Crie uma aplicação flask que tenha os 4 metodos HTTP. Quando chamados retorne uma string
 #A classe controller e a rota deve ser 'pessoa'
+
+##Exercicio Finalizado
