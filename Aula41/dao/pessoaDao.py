@@ -1,30 +1,26 @@
-import MySQLdb
 
+from Aula41.dao.BaseDao import BaseDao
 from Aula41.Model.pessoaModel import PessoaModel
- class PessoaDao:
+class PessoaDao(BaseDao):
     def __init__(self):
-        self.connection = MySQLdb.connect(host= '127.0.0.1', database='aula1', user='root')
-        self.cursor = self.connection.cursor()
+        super().__init__("pessoa")
     def list_all(self):
-        self.cursor.execute("SELECT * FROM pessoa")
-        pessoas = self.cursor.fetchall()
+        tuplas = super().list_all()
         lista_pessoa = []
-        for p in pessoas:
+        for p in tuplas:
             pessoa = PessoaModel(p[1], p[2], p[3], p[0])
             lista_pessoa.append(pessoa.__dict__)
         return lista_pessoa
+
+
     def get_by_id(self, id):
-        self.cursor.execute(f"SELECT * FROM pessoa WHERE ID={id}")
-        pessoa = self.cursor.fetchone()
-        p = PessoaModel(pessoa[1], pessoa[2], pessoa[3], pessoa[0])
+        model = super().get_by_id(id)
+        p = PessoaModel(model[1], model[2], model[3], model[0])
         return p.__dict__
-
-
 
     def insert(self, pessoa : PessoaModel):
         self.cursor.execute(f"INSERT INTO pessoa(Nome, Sobrenome, Idade) VALUES('{pessoa.nome}', '{pessoa.sobrenome}',{pessoa.idade})")
-        self.connection.commit()
-        id = self.cursor.lastrowid
+        super().insert(id)
         pessoa.id = id
         return pessoa.__dict__
 

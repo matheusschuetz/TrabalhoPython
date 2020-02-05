@@ -20,7 +20,7 @@ class EnderecoController(Resource):
         bairro = request.json['bairro']
         cidade = request.json['cidade']
         endereco = Endereco(logradouro, numero, complemento, bairro, cidade)
-        return = self.dao.insert(endereco)
+        return self.dao.insert(endereco)
 
     def put(self,id):
         logradouro = request.json['logradouro']
