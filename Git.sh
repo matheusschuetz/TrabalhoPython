@@ -8,7 +8,7 @@ echo Adicionando arquivo - git add *
 git add *
 echo ##############################################
 set /p comit=Digite o texto do seu commit: 
-git commit -m '%comit%'
+git commit -m '/p'
 echo ##############################################
 echo enviando arquivo para o Github
 git push
