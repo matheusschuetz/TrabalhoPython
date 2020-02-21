@@ -1,0 +1,18 @@
+Classe: Um template para criar novos tipo próprio, com comportamentos e atributos personalizados. Os métodos atuam sobre os
+atributos. Os construtores são implementados para definir um estado inicial do objeto.--
+
+Objeto: Uma variavel(estancia) da classe, que define uma area de memoria para aquele tipo. São capazes de reter um estado,
+isto é, o valor das variaveis. Objetos tambem representam entidades. Também interagem entre si por trocas de mensagens.
+Enviando atraves de métodos.--
+
+Metodos: Definem um comportamento do objeto, que podem alterar atributos, realizam trocas de mensagens com objetos.--
+
+Encapsulamentos: Deixa o comportamento de um objeto oculto, deixando privado. Só podendo ser alterado por métodos da classe.--
+
+Polimorfismo: Métodos que Dependendo da maneira que são chamados, tem comportamento diferente, por exemplo: list[1][2].--
+
+Herança: Transfere o comportamento e os atributos da classe para uma outra. Servem para reutilizar funcionalidades.--
+
+Composição: Seria como o próprio nome diz, uma composição do código através de atributos e classes, podendo ser de diversas formas.--
+
+Abstração: Uma forma de interagir com os métodos sem precisar de um conhecimento complexo do código interno.--
