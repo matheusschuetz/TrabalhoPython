@@ -1,7 +1,7 @@
-Classe: Um template para criar novos tipo próprio, com comportamentos e atributos personalizados. Os métodos atuam sobre os
+Classe: Um template para criar novos tipos próprios, com comportamentos e atributos personalizados. Os métodos atuam sobre os
 atributos. Os construtores são implementados para definir um estado inicial do objeto.--
 
-Objeto: Uma variavel(estancia) da classe, que define uma area de memoria para aquele tipo. São capazes de reter um estado,
+Objeto: Uma variavel(instancia) da classe, que define uma area de memoria para aquele tipo. São capazes de reter um estado,
 isto é, o valor das variaveis. Objetos tambem representam entidades. Também interagem entre si por trocas de mensagens.
 Enviando atraves de métodos.--
 
