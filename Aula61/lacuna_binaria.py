@@ -1,5 +1,5 @@
-def return_gap(N):
-    string = str(bin(N))
+def return_gap(n):
+    string = str(bin(n))
     corte = string[2:]
     lista = []
     for i in corte:
@@ -13,6 +13,7 @@ def return_gap(N):
             lista_contadores.append(counter)
             counter = 0
     return max(lista_contadores)
+
 
 a = return_gap(1041)
 print(a)
