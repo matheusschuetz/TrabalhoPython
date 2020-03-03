@@ -4,11 +4,8 @@
 
 # Leia o nome de uma pessoa no console
 # Realize a chamada do método enviando o nome da pessoa como argumento
-
+lista = []
 def receber_string(string: str):
-    lista = [string]
+    lista.append(string)
     print(f'A string {string} foi armazenada')
     return lista
-
-a = input('Adicione um nome:\n')
-receber_string(a)

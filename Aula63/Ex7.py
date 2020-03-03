@@ -8,8 +8,8 @@
 # Leia o novo nome da pessoa
 # Realize a chamada do método enviando o nome antigo e o novo nome
 
-
-def listagem(par1: str, par2: str, lista: list):
+lista = ['Matheus']
+def listagem(par1: str, par2: str):
     if par1 in lista:
         lista[lista.index(par1)] = par2
         print(f'Valor alterado com sucesso!!\n{par1} se tornou {par2}')
@@ -17,8 +17,3 @@ def listagem(par1: str, par2: str, lista: list):
     print('Valor não encontrado :(')
     return
 
-
-lista_pessoa = ['Matheus']
-a = input('Digite o nome que você quer alterar:\n')
-b = input('Digite o nome que vai substituir:\n')
-listagem(a, b, lista_pessoa)

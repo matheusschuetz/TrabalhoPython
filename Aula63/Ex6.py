@@ -2,10 +2,7 @@
 
 # Realize a chamada do método listando os dados e imprimindo no console
 lista = ['Matheus', 'Joao']
-
-
 def retornar():
     return lista
 
 
-print(retornar())
