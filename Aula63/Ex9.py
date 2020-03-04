@@ -1,8 +1,12 @@
+from Aula63.Ex10 import Endereco
+
+
 class Pessoa:
     def __init__(self):
         self.__nome = ''
         self.__sobrenome = ''
         self.__idade = 0
+        self.__endereco = Endereco()
 
     def get_nome(self) -> str:
         return self.__nome
