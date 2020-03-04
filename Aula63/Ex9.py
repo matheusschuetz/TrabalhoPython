@@ -17,6 +17,9 @@ class Pessoa:
     def get_idade(self) -> int:
         return self.__idade
 
+    def get_endereco(self):
+        return self.__endereco
+
     def set_nome(self, nome: str) -> None:
         self.__nome = nome
 
@@ -25,3 +28,6 @@ class Pessoa:
 
     def set_idade(self, idade: int) -> None:
         self.__idade = idade
+
+    def set_endereco(self, endereco: object) -> None:
+        self.__endereco = endereco
