@@ -1,0 +1,2 @@
+#A abstração é utilizada para fazer com que se possa utilizar o codigo sem precisar de um conhecimento profundo do mesmo
+#Entao assim fica mais facil para mais pessoa poder entender o funcionamento do codigo sem precisar olhar internamente
