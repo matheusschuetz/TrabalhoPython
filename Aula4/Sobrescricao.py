@@ -17,3 +17,4 @@ class Adicionar(Pessoa):
         #Foi utilizado o metodo cadastrar para complementar no cadastro
         super().cadastro(nome, sobrenome)
         self.cpf = cpf
+
