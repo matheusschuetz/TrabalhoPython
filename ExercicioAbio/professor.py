@@ -7,10 +7,10 @@ class Professor(Pessoa):
         self.__numero_registro = 0
         self.__valor_hora = 25.0
 
-    def get_numero_registro(self):
+    def get_numero_registro(self) -> int:
         return self.__numero_registro
 
-    def get_valor_hora(self):
+    def get_valor_hora(self) -> float:
         return self.__valor_hora
 
     def set_numero_registro(self, numero_registro: str) -> None:
@@ -19,5 +19,5 @@ class Professor(Pessoa):
     def set_valor_hora(self, valor_hora: str) -> None:
         self.__valor_hora = valor_hora
 
-    def horas_ganhas(self):
-        super().salario(self.__valor_hora, self.__valor_hora)
+    def salario(self, horas: float) -> float:
+        return horas * self.__valor_hora

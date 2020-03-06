@@ -26,6 +26,9 @@ class Pessoa:
     def set_idade(self, idade: int) -> None:
         self.__idade = idade
 
-    def salario(self, valor, numero_horas):
+    def salario(self,valor,numero_horas):
         custo = valor * numero_horas
         return custo
+
+    # def salario(self):
+    #     pass

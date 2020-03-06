@@ -19,5 +19,5 @@ class Engenheiro(Pessoa):
     def set_valor_hora(self, valor_hora: str) -> None:
         self.__valor_hora = valor_hora
 
-    def horas_ganhas(self):
-        super().salario(self.__valor_hora, self.__valor_hora)
+    def salario(self, horas):
+        return horas * self.__valor_hora
