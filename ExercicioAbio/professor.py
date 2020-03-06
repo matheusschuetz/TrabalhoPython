@@ -1,11 +1,11 @@
 from ExercicioAbio.pessoa import Pessoa
 
 
-class Engenheiro(Pessoa):
+class Professor(Pessoa):
     def __init__(self):
         super().__init__()
         self.__numero_registro = 0
-        self.__valor_hora = 30.0
+        self.__valor_hora = 25.0
 
     def get_numero_registro(self):
         return self.__numero_registro
